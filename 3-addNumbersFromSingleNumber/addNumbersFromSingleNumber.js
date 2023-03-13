@@ -12,15 +12,34 @@
 // Notes
 // Expect any positive number between 1 and 1000.
 
-/** solution */
+/** solution - for loop */
 
-function addUp (num) {
+function addUp1 (num) {
   let sum = 0
   for (let index = 0; index <= num; index++) {
     sum += index
   }
 
   return sum
+}
+
+/** solution - array with reduce  */
+
+function addUp1 (num) {
+  // const arr = Array.from(Array(num + 1).keys()).slice(1)
+  // console.log(arr)
+
+  // const reduced = Array.from(Array(num + 1).keys())
+  //   .slice(1)
+  //   .reduce((acc, current) => {
+  //     return acc + current
+  //   })
+
+  return Array.from(Array(num + 1).keys())
+    .slice(1)
+    .reduce((acc, current) => {
+      return acc + current
+    })
 }
 
 //test
